@@ -3,3 +3,4 @@ coverage/*/
 !coverage/css/
 !coverage/js/
 !coverage/fonts/
+results.xml

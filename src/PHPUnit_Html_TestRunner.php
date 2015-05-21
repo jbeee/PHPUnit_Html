@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  * HTML format PHPUnit tests results.
  *
  * To allow the running of normal PHPUnit tests from a web browser.
@@ -51,7 +51,7 @@ class PHPUnit_Html_TestRunner extends PHPUnit_TextUI_TestRunner {
             'stopOnSkipped' => false,
             'noGlobalsBackup' => true,
             'staticBackup' => true,
-            'syntaxCheck' => false, 
+            'syntaxCheck' => false,
             'bootstrap' => null,
             'configuration' => null,
             'noConfiguration' => false,
@@ -80,7 +80,7 @@ class PHPUnit_Html_TestRunner extends PHPUnit_TextUI_TestRunner {
             if (!isset($arguments['test']) && !isset($arguments['testFile'])) {
                 $arguments['test'] = getcwd();
             }
-    
+
             $arguments['printer'] = $printer;
             $arguments['listeners'] = array(new PHPUnit_Util_DeprecatedFeature_Logger());
 
@@ -93,10 +93,10 @@ class PHPUnit_Html_TestRunner extends PHPUnit_TextUI_TestRunner {
                 $arguments['test'],
                 $arguments['testFile'],
                 $arguments['syntaxCheck']);
-        
+
             unset($arguments['test']);
             unset($arguments['testFile']);
-    
+
             $result = $runner->doRun($suite, $arguments);
             $arguments['printer']->printResult($result);
 
@@ -108,6 +108,5 @@ class PHPUnit_Html_TestRunner extends PHPUnit_TextUI_TestRunner {
     }
 }
 
-/* vim: set expandtab tabstop=4 shiftwidth=4: */
 
 ?>
